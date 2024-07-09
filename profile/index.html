@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Profile | TNTPanel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"
+            integrity="sha512-MzluaiqTHieej9sKOtlT5D5uog5n278iCAX/sr8Ms271OkiKptg1RZgRXRjhQ+v4yO3LcffdeeQfiUfMpduqeA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="styles/main.css"/>
+
+    <script src="scripts/domainReplacer.js"></script>
+    <script src="scripts/tntClientServer.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/skin.js"></script>
+    <script src="scripts/themes.js"></script>
+    <script src="scripts/capeSelector.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../images/favicon-144x144.png">
+</head>
+<body>
+<div class="min-vh-100">
+    <header class="sticky-top mb-3">
+        <nav class="navbar bg-body-tertiary navbar-expand-lg">
+            <div class="container-xxl">
+                <a class="navbar-brand">
+                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel"> TNTPanel
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-lg-auto">
+                        <hr class="d-lg-none text-white-50">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="heart.html">Heart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Cape</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-current="page" href="#">Admin panel</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Util
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="pingVisualizer.html">Ping Visualizer</a></li>
+                            </ul>
+                        </li>
+                        <hr class="d-lg-none text-white-50">
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle theme-icon-active" type="button"
+                               data-bs-toggle="dropdown">
+                                <div class="d-none d-lg-block" style="padding-top: 2px"></div>
+                                <i class="bi bi-diamond-half opacity-50"></i>
+                                <span class="d-lg-none">Toggle theme</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="light">
+                                        <i class="bi bi-brightness-high-fill opacity-50"></i>
+                                        <p class="m-0 ms-2">Light</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="dark">
+                                        <i class="bi bi-moon-stars-fill opacity-50"></i>
+                                        <p class="m-0 ms-2">Dark</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="auto">
+                                        <i class="bi bi-diamond-half opacity-50"></i>
+                                        <p class="m-0 ms-2">Auto</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                            <hr class="d-lg-none my-2 text-white-50">
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <img class="rounded-circle"
+                                     src="https://mineskin.eu/helm/6bd6e833-a80a-430e-9029-4786368811f9/32"
+                                     alt="" id="avatarImage"/>
+                                <span class="d-lg-none" id="avatarUsername">Loading...</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                <li>
+                                    <button class="dropdown-item" type="button" id="logoutBtn">Sign out</button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-xxl">
+        <div class="d-flex justify-content-center">
+            <div class="row justify-content-center row-cols-1 row-cols-md-2 g-5">
+                <div class="col type-block">
+                    <div class="card shadow-lg h-100">
+                        <div class="ratio skin-render-block rounded-top" id="skin_default"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vanilla & Optifine Cape</h5>
+                            <p class="card-text">
+                                This option allows you to wear capes issued by Mojang or Optifine. These capes are
+                                limited in design and customisation.
+                            </p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-end btn-group" role="group">
+                            <button class="btn btn-success w-100" id="vanillaSelectBtn" type="button"
+                                    data-bs-toggle="button">Select
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col type-block">
+                    <div class="card shadow-lg h-100">
+                        <div class="ratio skin-render-block rounded-top" id="skin_tntclient"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">TNTClient Cape</h5>
+                            <p class="card-text">
+                                This option allows you to wear custom capes in TNTClient. These capes are unlimited and
+                                varied and allow you to express your personality and style.
+                            </p>
+                        </div>
+                        <div class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="right"
+                             id="buyCape1"
+                             data-bs-title="You haven't bought a cape. But you can try on the cape on this website.">
+                            <div class="card-footer d-flex justify-content-end btn-group" role="group">
+                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#capeSettings" aria-expanded="false"
+                                        aria-controls="capeSettings" id="capeSettingsBtn">Edit
+                                </button>
+                                <button class="btn btn-primary disabled" id="tntClientSelectBtn">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse collapse-horizontal pt-3" id="capeSettings">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="card-body h-100">
+                            <div class="d-flex align-items-start flex-column h-100">
+                                <div class="mb-auto w-100">
+                                    <h3>Cloning from other skins</h3>
+                                    <hr>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Nickname</span>
+                                        <input type="text" class="form-control" placeholder="Jeka8833"
+                                               aria-label="Username" id="playerNameField">
+                                        <button class="btn btn-primary" type="button" id="requestPlayerInfo">Get info
+                                        </button>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <label class="input-group-text" for="capeType">Capes</label>
+                                        <select class="form-select" id="capeType">
+                                            <option selected>None</option>
+                                        </select>
+                                        <a class="btn btn-primary" type="button" id="capeTypeDownload"
+                                           download="cape" target="_blank" rel="noopener noreferrer">Download</a>
+                                    </div>
+                                    <h3 class="mt-5">Load custom cape</h3>
+                                    <hr>
+                                    <input type="file" class="form-control mb-3" id="capeFile"
+                                           onclick="this.value=null;" accept="image/png, image/jpeg, image/jpg">
+
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="fromInternet"
+                                               checked>
+                                        <label class="form-check-label" for="fromInternet">
+                                            My photo is taken from the internet and uses the wrong markup, it needs to
+                                            be converted to a cape.
+                                        </label>
+                                    </div>
+                                    <div id="blurBox" class="visually-hidden">
+                                        <label for="blur" class="form-label" id="blurText">Blur image</label>
+                                        <input type="range" class="form-range" min="0" max="3" step="0.1" value="0.7"
+                                               id="blur">
+                                    </div>
+
+                                    <h3 class="mt-5">Frequent questions</h3>
+                                    <hr>
+                                    <ul>
+                                        <li><a href="#" type="button" data-bs-toggle="offcanvas"
+                                               data-bs-target="#helpCape" aria-controls="helpCape">I want to draw myself
+                                            a cape, where can I get a template?</a></li>
+                                        <li><a href="https://livzmc.net/minecraft-capes" target="_blank"
+                                               rel="noopener noreferrer">I want a ready-made cape, where can I
+                                            choose?</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex justify-content-end w-100 mt-3">
+                                    <div class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                                         data-bs-placement="left" id="buyCape2"
+                                         data-bs-title="You haven't bought a cape.">
+                                        <button class="btn btn-success disabled" id="editSave">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="ratio skin-render-block-color h-100" id="skin_tntclient_edit"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="helpCape"
+     aria-labelledby="helpCapeLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="helpCapeLabel">Instructions for drawing the cape</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="list-unstyled">
+            <li><p>The instructions are divided into steps.</p></li>
+
+            <li><strong>1. Decide on the size of the cape you want.</strong></li>
+            <li><p>TNTClient supports the following cape sizes: 64x32 (standard size), 128x64, 256x128 (recommended
+                resolution), 512x256 and 1024x512. The larger the cape size, the sharper the image, but it also takes up
+                more space in the video memory.</p>
+            </li>
+
+            <li><strong>2. Downloading the required template.</strong></li>
+            <li>There are 2 formats:
+                <ul>
+                    <li>psd - For those who have Photoshop.</li>
+                    <li>png - Can be edited using any graphics editor (e.g. Paint)</li>
+                </ul>
+            </li>
+            <li>Templates:
+                <ul>
+                    <li>64x32: <a href="templates/64x32.psd">psd</a>, <a href="templates/64x32.png">png</a></li>
+                    <li>128x64: <a href="templates/128x64.psd">psd</a>, <a href="templates/128x64.png">png</a></li>
+                    <li>256x128: <a href="templates/256x128.psd">psd</a>, <a href="templates/256x128.png">png</a>,
+                        <a href="templates/256x128%20Example.psd">psd (Example)</a>,
+                        <a href="templates/256x128%20Example.png">png (Example)</a></li>
+                    <li>512x256: <a href="templates/512x256.psd">psd</a>, <a href="templates/512x256.png">png</a></li>
+                </ul>
+            </li>
+            <li><p></p></li>
+
+            <li><strong>3. Draw what you want to see.</strong></li>
+            <li>The most difficult stage, but I believe you can do it.</li>
+            <li>
+                <ul>
+                    <li>You don't have to draw, you can insert any picture from the internet.</li>
+                </ul>
+            </li>
+            <li><p></p></li>
+
+            <li>
+                <strong>4. Check on this website to see how it will look on you and if there are any mistakes.</strong>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="saveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Save</strong>
+        </div>
+        <div class="toast-body">
+            Do you want to save the changes? After saving, you will see the changes on your cape in 5 minutes.
+            <div class="mt-2">
+                <button type="button" class="btn btn-primary btn-sm" id="saveChanges">
+                    <span class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"
+                          id="saveSpinner"></span>
+                    Save
+                </button>
+                <button type="button" class="btn btn-primary btn-sm" id="discardChanges">Reset all</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl flex-grow-0 flex-shrink-1 border-top mt-3">
+    <footer class="py-1 m-1">
+        <div class="d-flex align-items-center flex-column flex-sm-row justify-content-between">
+            <p class="m-0">Created by: Jeka8833, 2023 year</p>
+            <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i></a>
+        </div>
+    </footer>
+</div>
+
+<div aria-live="polite" aria-atomic="true" id="errorBox" class="bg-body-secondary position-relative d-none">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center bg-danger show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex shadow-lg">
+                <div class="toast-body text-light">
+                    Server is down. You can try reloading the website.
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

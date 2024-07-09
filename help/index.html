@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TNTClient - Help</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="../profile/scripts/themes.js"></script>
+    <script src="../profile/scripts/domainReplacer.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../images/favicon-144x144.png">
+</head>
+<body>
+<div class="min-vh-100">
+    <header class="sticky-top">
+        <nav class="navbar bg-body-tertiary navbar-expand-lg">
+            <div class="container-xxl">
+                <a class="navbar-brand" href="../">
+                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="" loading="lazy">
+                    TNTClient Help
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h4 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle theme-icon-active" href="#" role="button"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="bi bi-diamond-half opacity-50"></i>
+                                    <span class="d-lg-none">Toggle theme</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="light">
+                                            <i class="bi bi-brightness-high-fill opacity-50 me-2"></i>Light
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="dark">
+                                            <i class="bi bi-moon-stars-fill opacity-50 me-2"></i>Dark
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="auto">
+                                            <i class="bi bi-diamond-half opacity-50 me-2"></i>Auto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Full list of documentation</h1>
+                    <p class="lead text-body-secondary">You can find answers to your questions here.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="acc-btn accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <strong>Getting your own Hypixel API key.</strong>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>The Hypixel Key API is needed to speed up loading player information or if for some reason
+                            the TNTClient server goes down.</p>
+                        <p>In this article you will learn how to register your key.</p>
+                        <p>Article:
+                            <a href="api/" target="_blank"
+                               rel="noopener noreferrer">https://{{host}}/help/api/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Installing a custom game cape in TNTClient.</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Instruction is for those who have donated any amount of money and now have the opportunity to
+                            install any cape.</p>
+                        <p>This article will show you how to create and install your own cape.</p>
+                        <p>Article:
+                            <a href="cape/" target="_blank"
+                               rel="noopener noreferrer">https://{{host}}/help/cape/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="container-xxl flex-grow-0 flex-shrink-1 border-top">
+    <div class="py-1 m-1 d-flex align-items-center flex-column flex-sm-row justify-content-between">
+        <p class="m-0">Created by: Jeka8833, 2023 year</p>
+        <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github"></i></a>
+    </div>
+</footer>
+</body>
+</html>

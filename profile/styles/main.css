@@ -1,0 +1,14 @@
+.skin-render-block {
+    max-height: 500px;
+    --bs-aspect-ratio: 150%;
+    background-color: #55595c;
+}
+
+.type-block {
+    max-width: 500px;
+}
+
+.skin-render-block-color {
+    min-height: 450px;
+    background-color: #55595c;
+}

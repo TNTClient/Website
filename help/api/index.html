@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TNTClient - Hypixel API Key</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="../../styles/apikey.css">
+
+    <script src="../../profile/scripts/themes.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../../images/favicon-144x144.png">
+</head>
+<body>
+<div class="min-vh-100">
+    <header class="sticky-top">
+        <nav class="navbar bg-body-tertiary navbar-expand-lg">
+            <div class="container-xxl">
+                <a class="navbar-brand" href="../../">
+                    <img src="../../images/favicon-32x32.png" width="32" height="32" alt="" loading="lazy">
+                    TNTClient Help
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h4 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle theme-icon-active" href="#" role="button"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="bi bi-diamond-half opacity-50"></i>
+                                    <span class="d-lg-none">Toggle theme</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="light">
+                                            <i class="bi bi-brightness-high-fill opacity-50 me-2"></i>Light
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="dark">
+                                            <i class="bi bi-moon-stars-fill opacity-50 me-2"></i>Dark
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-flex align-items-center"
+                                                data-bs-theme-value="auto">
+                                            <i class="bi bi-diamond-half opacity-50 me-2"></i>Auto
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Detailed instructions on how to obtain a Hypixel API key</h1>
+                    <p class="lead text-body-secondary">If you are already registered on the website, you can skip
+                        Chapters 1 and 2. I also strongly recommend that everyone goes through Chapter 4.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="acc-btn accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <strong>Chapter 1: Registration on the website.</strong>
+                        <span class="badge rounded-pill text-bg-warning">1-48 Hours</span>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Estimated time for this step is 1-48 hours</p>
+                        <p>Those who already have an account on the website can skip this chapter.</p>
+                        <p>Obsolete supporting literature:
+                            <a href="https://support.hypixel.net/hc/en-us/articles/360019646639" target="_blank"
+                               rel="noopener noreferrer"> https://support.hypixel.net/hc/en-us/articles/360019646639</a>
+                        </p>
+
+
+                        <h5 class="pt-5 pb-2">Step 1: Go to the website:
+                            <a href="https://hypixel.net/register/" target="_blank" rel="noopener noreferrer">
+                                https://hypixel.net/register/</a>
+                        </h5>
+                        <img src="../../images/apikey/1registerSite.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="register" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 2: Fill in the required forms.</h5>
+                        <img src="../../images/apikey/2registerFill.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="register Fill" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 3: Press the registration button.</h5>
+                        <img src="../../images/apikey/3registerButton.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="register Button" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 4: Wait less than 48 hours for your account to be verified.</h5>
+                        <img src="../../images/apikey/4registerWait.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="register Wait" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Chapter 2: Linking Minecraft to Hypixel Forum.</strong>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Estimated time for this step is 10 minutes</p>
+                        <p>For those who have already linked Minecraft to Hypixel Forum, skip this step.</p>
+
+
+                        <h5 class="pt-5">Step 1: Click on the link:
+                            <a href="https://hypixel.net/account/minecraft" target="_blank" rel="noopener noreferrer">
+                                https://hypixel.net/account/minecraft</a>
+                        </h5>
+
+
+                        <h5>Step 2: Everything is described on the official website, read the
+                            following link:
+                            <a href="https://support.hypixel.net/hc/en-us/articles/360019647059" target="_blank"
+                               rel="noopener noreferrer"> https://support.hypixel.net/hc/en-us/articles/360019647059</a>
+                        </h5>
+
+
+                        <h5 class="pb-2">Step 3: The result to be achieved</h5>
+                        <img src="../../images/apikey/5linkResult.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="link Result" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Chapter 3: Generating a&nbsp;<u>temporary</u>&nbsp;'Development Key'.</strong>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Estimated time for this step is 20 minutes</p>
+                        <p>This step is necessary so that you can play until your 'Personal API Key' request is
+                            approved. This key is given for 3 day, so I highly recommend applying for a 'Personal API
+                            Key'.</p>
+
+
+                        <h5 class="pt-5 pb-2">Step 1: Go to:
+                            <a href="https://developer.hypixel.net/" target="_blank" rel="noopener noreferrer">
+                                https://developer.hypixel.net/</a>
+                        </h5>
+                        <img src="../../images/apikey/6logindashboard.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 2: Press the "Login" button</h5>
+                        <img src="../../images/apikey/6.5logindashboard.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Login" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 3: Click the 'Create API key' button. You may already have a
+                            generated key, then skip this step.</h5>
+                        <img src="../../images/apikey/7dashboard.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 4: Copy the key. Everyone copies it differently, I suggest clicking
+                            on the green rectangle to put the key on the clipboard. If you can't copy it, enter the key
+                            manually directly into Minecraft.</h5>
+                        <img src="../../images/apikey/9developerKeyCopy.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Copy" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 5: Enter the command «@api &lt;Your development key&gt;» into the
+                            chat.
+                            Instead of «&lt;Your development key&gt;» enter your key. Example: «@api
+                            c14a1ecd-686d-45d8-8c49-1a8453d090d9»</h5>
+                        <img src="../../images/apikey/10setKey.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Minecraft Paste" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 6: Execute the command, if the command fails then you have not
+                            rewritten the key correctly.</h5>
+                        <img src="../../images/apikey/11setKeyuccess.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Minecraft Check" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="acc-btn accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <strong>Chapter 4: Generating a&nbsp;<u>permanent</u>&nbsp;'Personal API Key'.</strong>
+                        <span class="badge rounded-pill text-bg-warning">1-72 Hours</span>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        <p>Estimated time for this step is 1-72 hours</p>
+                        <p>This step is necessary if you want a permanent key.</p>
+
+
+                        <h5 class="pt-5 pb-2">Step 1. Go to
+                            <a href="https://developer.hypixel.net/dashboard/" target="_blank"
+                               rel="noopener noreferrer">
+                                https://developer.hypixel.net/dashboard/</a> and click on "Create App".
+                        </h5>
+                        <img src="../../images/apikey/12dashboardCreateApp.png"
+                             class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Create" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 2: Next, click "Continue" under "Personal API Key".</h5>
+                        <img src="../../images/apikey/13dashboardSelect.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Select" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 3: Hypixel's policy changes all the time, so read it before writing a
+                            description. I can't guarantee you'll get the key, I'm just suggesting you lie a little. At
+                            this point you can introduce yourself as the developer of your own mod.&nbsp;<u>Be sure to
+                                come up with a name and description yourself, it will be fun if there are many
+                                developers of the same mod.</u></h5>
+                        <img src="../../images/apikey/14dashboardFill.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Fill" loading="lazy"/>
+
+
+                        <h5 class="pt-5">Step 4: Press "Continue" and any other confirmation buttons that
+                            appear.</h5>
+
+
+                        <h5 class="pb-2">Step 5: Wait 1-48 hours for the application to be confirmed. Wait for the
+                            icons I have highlighted in red to disappear.</h5>
+                        <img src="../../images/apikey/15dashboardPendingCopy.png"
+                             class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Pending" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 6: After waiting for the request to be approved, click on the
+                            "Regenerate API Key" button.</h5>
+                        <img src="../../images/apikey/16dashboardRegenerate.png"
+                             class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Dashboard Regenerate" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 7: Click "Confirm"</h5>
+                        <img src="../../images/apikey/17dashboardRegenerateConfirm.png"
+                             class="rounded-4 mx-auto d-block img-fluid" alt="Dashboard Confirm" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 8: Copy the key. Everyone copies it differently, I suggest clicking
+                            on the green rectangle to put the key on the clipboard. If you can't copy it, enter the key
+                            manually directly into Minecraft.</h5>
+                        <img src="../../images/apikey/18dashboardRegenerateCopy.png"
+                             class="rounded-4 mx-auto d-block img-fluid" alt="Dashboard Copy" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 9: Enter the command «@api &lt;Your development key&gt;» into the
+                            chat.
+                            Instead of «&lt;Your development key&gt;» enter your key. Example: «@api
+                            c14a1ecd-686d-45d8-8c49-1a8453d090d9»</h5>
+                        <img src="../../images/apikey/10setKey.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Minecraft Paste" loading="lazy"/>
+
+
+                        <h5 class="pt-5 pb-2">Step 10: Execute the command, if the command fails then you have not
+                            rewritten the key correctly.</h5>
+                        <img src="../../images/apikey/11setKeyuccess.png" class="rounded-4 mx-auto d-block img-fluid"
+                             alt="Minecraft Check" loading="lazy"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer class="container-xxl flex-grow-0 flex-shrink-1 border-top">
+    <div class="py-1 m-1 d-flex align-items-center flex-column flex-sm-row justify-content-between">
+        <p class="m-0">Created by: Jeka8833, 2023 year</p>
+        <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github"></i></a>
+    </div>
+</footer>
+</body>
+</html>

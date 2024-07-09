@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Heart Setting | TNTPanel</title>
+    <link rel="stylesheet" href="styles/heart.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="scripts/domainReplacer.js"></script>
+    <script src="scripts/tntClientServer.js"></script>
+    <script src="scripts/heart.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/themes.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../images/favicon-144x144.png">
+</head>
+<body>
+<div class="min-vh-100">
+    <header class="sticky-top mb-3">
+        <nav class="navbar bg-body-tertiary navbar-expand-lg">
+            <div class="container-xxl">
+                <a class="navbar-brand">
+                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel"> TNTPanel
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-lg-auto">
+                        <hr class="d-lg-none text-white-50">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="heart.html">Heart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Cape</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-current="page" href="#">Admin panel</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Util
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="pingVisualizer.html">Ping Visualizer</a></li>
+                            </ul>
+                        </li>
+                        <hr class="d-lg-none text-white-50">
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle theme-icon-active" type="button"
+                               data-bs-toggle="dropdown">
+                                <div class="d-none d-lg-block" style="padding-top: 2px"></div>
+                                <i class="bi bi-diamond-half opacity-50"></i>
+                                <span class="d-lg-none">Toggle theme</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="light">
+                                        <i class="bi bi-brightness-high-fill opacity-50"></i>
+                                        <p class="m-0 ms-2">Light</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="dark">
+                                        <i class="bi bi-moon-stars-fill opacity-50"></i>
+                                        <p class="m-0 ms-2">Dark</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a type="button" class="dropdown-item hstack" data-bs-theme-value="auto">
+                                        <i class="bi bi-diamond-half opacity-50"></i>
+                                        <p class="m-0 ms-2">Auto</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+                            <hr class="d-lg-none my-2 text-white-50">
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <img class="rounded-circle"
+                                     src="https://mineskin.eu/helm/6bd6e833-a80a-430e-9029-4786368811f9/32"
+                                     alt="" id="avatarImage"/>
+                                <span class="d-lg-none" id="avatarUsername">Loading...</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                <li>
+                                    <button class="dropdown-item" type="button" id="logoutBtn">Sign out</button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-xxl">
+        <div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h3>Edit animation text</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="tools d-flex flex-wrap mt-1">
+                            <button data-color="0" class="bg-1 flex-fill mx-1 mb-2 rounded border border-2">&amp;0
+                            </button>
+                            <button data-color="1" class="bg-2 flex-fill mx-1 mb-2 rounded border border-2">&amp;1
+                            </button>
+                            <button data-color="2" class="bg-3 flex-fill mx-1 mb-2 rounded border border-2">&amp;2
+                            </button>
+                            <button data-color="3" class="bg-4 flex-fill mx-1 mb-2 rounded border border-2">&amp;3
+                            </button>
+                            <button data-color="4" class="bg-5 flex-fill mx-1 mb-2 rounded border border-2">&amp;4
+                            </button>
+                            <button data-color="5" class="bg-6 flex-fill mx-1 mb-2 rounded border border-2">&amp;5
+                            </button>
+                            <button data-color="6" class="bg-7 flex-fill mx-1 mb-2 rounded border border-2">&amp;6
+                            </button>
+                            <button data-color="7" class="bg-8 flex-fill mx-1 mb-2 rounded border border-2">&amp;7
+                            </button>
+                            <button data-color="8" class="bg-9 flex-fill mx-1 mb-2 rounded border border-2">&amp;8
+                            </button>
+                            <button data-color="9" class="bg-10 flex-fill mx-1 mb-2 rounded border border-2">&amp;9
+                            </button>
+                            <button data-color="a" class="bg-11 flex-fill mx-1 mb-2 rounded border border-2">&amp;a
+                            </button>
+                            <button data-color="b" class="bg-12 flex-fill mx-1 mb-2 rounded border border-2">&amp;b
+                            </button>
+                            <button data-color="c" class="bg-13 flex-fill mx-1 mb-2 rounded border border-2">&amp;c
+                            </button>
+                            <button data-color="d" class="bg-14 flex-fill mx-1 mb-2 rounded border border-2">&amp;d
+                            </button>
+                            <button data-color="e" class="bg-15 flex-fill mx-1 mb-2 rounded border border-2">&amp;e
+                            </button>
+                            <button data-color="f" class="bg-16 flex-fill mx-1 mb-2 rounded border border-2">&amp;f
+                            </button>
+                            <button data-color="l" class="flex-fill mx-1 mb-2 rounded border border-2">
+                                <span style="font-weight: bold;">Bold</span></button>
+                            <button data-color="n" class="flex-fill mx-1 mb-2 rounded border border-2">
+                                <span style="text-decoration: underline;">Underline</span></button>
+                            <button data-color="o" class="flex-fill mx-1 mb-2 rounded border border-2">
+                                <span style="font-style: italic;">Italic</span></button>
+                            <button data-color="m" class="flex-fill mx-1 mb-2 rounded border border-2">
+                                <span style="text-decoration: line-through;">Strikethrough</span></button>
+                            <button data-color="k" class="flex-fill mx-1 mb-2 rounded border border-2">Obfuscated
+                            </button>
+                            <button data-color="r" class="flex-fill mx-1 mb-2 rounded border border-2">Reset</button>
+                        </div>
+                        <textarea class="form-control" id="text" cols="5" wrap="hard">&a❤</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h3>Preview</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-2">Preview field (Inaccuracies in font display may occur):</p>
+                        <div class="border rounded p-2 mb-4" id="resultField"
+                             style="font-family: Minecraftia,serif"></div>
+
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <label for="speedDivider" class="form-label" id="speedDividerText">Animation Delay (1000
+                                    ms):</label>
+                                <input type="range" class="form-range" min="100" max="10000" step="100" value="1000"
+                                       id="speedDivider">
+                            </div>
+                            <button class="flex-shrink-1 btn btn-success ms-3" type="button" id="pause">Playing
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert alert-danger visually-hidden" role="alert" id="maxAnimationWarning">
+            Must be less than or equal to 16 animations. Delete unnecessary lines in the editable area.
+        </div>
+        <div class="alert alert-danger visually-hidden" role="alert" id="maxCharacters2Warning">
+            The number of displayed characters must be less than or equal to 8. Delete unnecessary characters in the
+            area to be edited.
+        </div>
+        <div class="alert alert-danger visually-hidden" role="alert" id="maxCharactersWarning">
+            There must be less than or equal to 64 characters in a line. Delete unnecessary characters in the
+            area to be edited.
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap">
+            <div class="align-self-center m-2">
+                <a href="https://hypixel.net/threads/%E3%83%84symbols%E2%98%BB.787483/" target="_blank"
+                   rel="noopener noreferrer">An incomplete list of available emoji</a></div>
+            <div>
+                <button type="button" class="btn btn-danger m-2" data-bs-toggle="modal"
+                        data-bs-target="#hardResetAgree">
+                    Hard reset
+                </button>
+                <div class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                     data-bs-placement="right" id="buyHeart2"
+                     data-bs-title="You haven't bought a heart.">
+                    <button type="button" class="btn btn-success m-2" id="openSaveWindow" data-bs-toggle="modal"
+                            data-bs-target="#saveAgree">Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="modal fade" id="hardResetAgree" tabindex="-1" aria-labelledby="hardResetAgreeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="hardResetAgreeLabel">Hard reset</h1>
+            </div>
+            <div class="modal-body">
+                This will reset and delete the animation with no possibility to restore it. Are you sure you want to
+                reset the current animation?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success m-2" data-bs-toggle="modal"
+                        data-bs-target="#saveAgree" id="resetAndSave">Reset & Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="saveAgree" tabindex="-1" aria-labelledby="saveAgreeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="saveAgreeLabel">Hard reset</h1>
+            </div>
+            <div class="modal-body">
+                Do you want to save the changes? After saving, you will see the changes on your hear in 5 minutes.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                     data-bs-placement="right" id="buyHeart1"
+                     data-bs-title="You haven't bought a heart.">
+                    <button type="button" class="btn btn-primary disabled" id="saveButton">
+                    <span class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"
+                          id="saveSpinner"></span> Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl flex-grow-0 flex-shrink-1 border-top mt-3">
+    <footer class="py-1 m-1">
+        <div class="d-flex align-items-center flex-column flex-sm-row justify-content-between">
+            <p class="m-0">Created by: Jeka8833, 2023 year</p>
+            <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i></a>
+        </div>
+    </footer>
+</div>
+
+
+<div aria-live="polite" aria-atomic="true" id="errorBox" class="bg-body-secondary position-relative d-none">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center bg-danger show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex shadow-lg">
+                <div class="toast-body text-light">
+                    Server is down. You can try reloading the website.
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

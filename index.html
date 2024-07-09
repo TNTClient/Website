@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TNTClient</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"
+            integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="scripts/mainPage.js"></script>
+
+    <script src="profile/scripts/themes.js"></script>
+    <script src="profile/scripts/domainReplacer.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="images/favicon-144x144.png">
+</head>
+<body>
+
+<div style="background: rgba(0, 0, 0, 1);">
+    <img src="images/mainPage/main.jpg" alt="Background"
+         class="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2">
+    <div class="position-relative container d-flex mx-auto flex-column text-center vh-100 z-3">
+        <header class="mb-auto">
+            <div>
+                <div class="float-md-start mb-0 pt-3">
+                    <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold py-1 px-2"
+                       href="help/">Documentation</a>
+                    <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold py-1 px-2"
+                       href="#donate">Donation</a>
+                </div>
+
+                <nav class="nav nav-masthead justify-content-center float-md-end pt-3">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-light dropdown-toggle theme-icon-active" href="#" role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <i class="bi bi-diamond-half"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg">
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="light">
+                                        <i class="bi bi-brightness-high-fill opacity-50 me-2"></i>Light
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark">
+                                        <i class="bi bi-moon-stars-fill opacity-50 me-2"></i>Dark
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto">
+                                        <i class="bi bi-diamond-half opacity-50 me-2"></i>Auto
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div style="max-width: 21em" class="mx-auto text-light">
+            <h1>TNTClient</h1>
+            <h5>A modified Minecraft client for those who like to play TNT Games.</h5>
+            <a href="#download" class="btn btn-lg btn-light fw-bold border-white bg-white mt-4">Download</a>
+        </div>
+
+        <div class="mt-auto"></div>
+    </div>
+</div>
+
+
+<main class="container-sm">
+    <div class="py-5" id="download">
+        <h1 class="text-center">Download</h1>
+        <hr/>
+
+        <div class="d-flex flex-wrap">
+            <div class="flex-fill p-2">
+                <label for="system" class="form-label">Launcher</label>
+                <select class="form-select" aria-label="System" id="type" onchange="showDownload()">
+                    <option selected value="0">All</option>
+                    <option value="1">Official Minecraft Launcher</option>
+                    <option value="2">MultiMC based</option>
+                </select>
+            </div>
+
+            <div class="flex-fill p-2">
+                <label for="system" class="form-label">Operating System</label>
+                <select class="form-select" aria-label="System" id="system" onchange="showDownload()">
+                    <option selected value="0">All</option>
+                    <option value="1">Windows</option>
+                    <option value="2">Linux</option>
+                    <option value="3">MacOS</option>
+                </select>
+            </div>
+
+            <div class="flex-fill p-2">
+                <label for="architecture" class="form-label">Processor Architecture</label>
+                <select class="form-select" aria-label="Architecture" id="architecture" onchange="showDownload()">
+                    <option selected value="0">All</option>
+                    <option value="1">x86 (32-bit)</option>
+                    <option value="2">x86 (64-bit)</option>
+                    <option value="3">ARM (64-bit)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 pt-5 text-center">
+            <div class="col" id="OfflineInstaller">
+                <div class="card h-100 border shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">Offline Installer</h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                            <span class="badge text-bg-primary m-1">Universal</span>
+                            <span class="badge text-bg-primary m-1">Official Minecraft Launcher</span>
+                        </h6>
+                        <hr/>
+                        <div class="card-text">
+                            <p>This type of installation allows the client to be installed without internet, and the
+                                installer works on all platforms. Can be used to save a version of the client.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="https://{{download}}/download/TNTClient.jar" target="_blank"
+                           rel="noopener noreferrer">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="OnlineInstaller">
+                <div class="card h-100 border shadow-lg border-success">
+                    <div class="card-body">
+                        <h3 class="card-title">Online Installer</h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                            <span class="badge text-bg-success m-1">Recommended</span>
+                            <span class="badge text-bg-primary m-1">Universal</span>
+                            <span class="badge text-bg-primary m-1">Official Minecraft Launcher</span>
+                        </h6>
+                        <hr/>
+                        <div class="card-text">
+                            <p>This type of installation is recommended as it always downloads the latest version.
+                                Internet and Java are required.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="https://{{download}}/download/TNTClientInstaller.jar"
+                           target="_blank" rel="noopener noreferrer">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="InstallerJava">
+                <div class="card h-100 border shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">Installer with Java</h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                            <span class="badge text-bg-primary m-1">Windows</span>
+                            <span class="badge text-bg-primary m-1">Official Minecraft Launcher</span>
+                        </h6>
+                        <hr/>
+                        <div class="card-text">
+                            <p>This type of installation is necessary for people who don't have Java on their
+                                computer.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="https://{{download}}/download/OfflineInstaller.zip"
+                           target="_blank" rel="noopener noreferrer">Download</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="MultiMCUniversal">
+                <div class="card h-100 border shadow-lg">
+                    <div class="card-body">
+                        <h3 class="card-title">MultiMC Universal</h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                            <span class="badge text-bg-primary m-1">Universal</span>
+                            <span class="badge text-bg-primary m-1">MultiMC based</span>
+                        </h6>
+                        <hr/>
+                        <div class="card-text">
+                            <p>Universal version for MultiMC based launchers that will be automatically updated. Does
+                                not contain recompiled libraries for a specific architecture.</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex flex-nowrap">
+                            <a class="btn btn-link p-0 me-2"
+                               href="https://{{download}}/download/TNTClient-universal.zip" target="_blank"
+                               rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top"
+                               data-bs-custom-class="custom-tooltip" data-bs-title="Download">
+                                <i class="bi bi-download"></i>
+                            </a>
+                            <pre tabindex="0" class="w-100 chroma m-0" id="MultiMCUniversalLink">https://{{download}}/download/TNTClient-universal.zip</pre>
+                            <button class="copy btn btn-link p-0 ms-2" data-clipboard-target="#MultiMCUniversalLink"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" data-bs-title="Copy">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="py-5">
+        <h1 class="text-center">FAQ</h1>
+        <hr/>
+        <div class="accordion shadow-lg">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane1" aria-expanded="false" aria-controls="pane1">
+                        How to install?
+                    </button>
+                </h2>
+                <div id="pane1" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Unfortunately, I will not be providing a full step-by-step guide. However, installation of the
+                        client is simple for the most part. Click on the link above which applies to you: if you have
+                        Java installed on your computer, the first download will give you a file, you can click on it
+                        and hit "install". If you do not have Java, download the client from the second link where you
+                        must extract the file into a folder, and then click on the "start.bat" file. Feel free to
+                        contact a server administrator if you need further assistance with this.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane2" aria-expanded="false" aria-controls="pane2">
+                        What is the TNTClient for?
+                    </button>
+                </h2>
+                <div id="pane2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The TNTClient was created for TNT games. All features have been created to enhance the gaming
+                        experience. If you love TNT games, this client is just for you.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane3" aria-expanded="false" aria-controls="pane3">
+                        If I use client, can I get a ban?
+                    </button>
+                </h2>
+                <div id="pane3" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        There's a 99% chance you won't get a ban due to client usage, but you have many other factors
+                        for getting a ban. But if for some reason a module will give you a ban, that module will be
+                        disabled for everyone.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane4" aria-expanded="false" aria-controls="pane4">
+                        What does DJFix do and is it safe?
+                    </button>
+                </h2>
+                <div id="pane4" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The DJFix module corrects your jump when you jump in games such as: TNT-Run, PVP-Run and
+                        Bowspleef. All players who have enabled this module jump to the same height at any ping. The
+                        DJFix module cannot be called 'safe' because it changes the speed of your jump. But in theory
+                        and in the 2 years since the client came out, not a single ban has been registered due to the
+                        use of TNTClient. It's up to you to draw your own conclusions.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane5" aria-expanded="false" aria-controls="pane5">
+                        How do I open the menu in the client?
+                    </button>
+                </h2>
+                <div id="pane5" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The client menu is opened by pressing the right shift key on the keyboard. But this key can
+                        be
+                        changed to any other key on the keyboard.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#pane6" aria-expanded="false" aria-controls="pane6">
+                        What do the suffix and prefix in a name mean?
+                    </button>
+                </h2>
+                <div id="pane6" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        The ‘[Wi:…]’ prefix denotes the number of win in the game, only visible when player has > 0
+                        wins.
+                        <br>The ‘[Lo:…]’ prefix denotes the number of loses in the game, only visible when the player
+                        has > 0 loses.
+                        <br>The ‘[St:…]’ prefix denotes the number of streak in the game, only visible when streak is >
+                        0.
+                        <br>The 'J' suffix indicates that this user is using the DJFix module.
+                        <br>The 'green heart' suffix indicates that this user is also using this client.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-5 text-center" id="contact">
+        <h1 class="text-center">Contact</h1>
+        <hr/>
+        <div class="row row-cols-1 row-cols-md-2 g-4 pt-5">
+            <div style="max-width: 400px" class="col mx-auto">
+                <div class="card h-100 border border-0">
+                    <img src="images/mainPage/Jeka8833-avatar.jpg" class="card-img-top rounded-circle mx-auto"
+                         alt="Jeka8833 Avatar" style="max-width: 150px" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Jeka8833</h3>
+                        <hr/>
+                        <div class="card-text">
+                            <p>The main developer of the client. All questions should preferably be directed to the
+                                <a class="" href="https://discord.gg/tntrun">#suggestion-and-general</a> channel.
+                            </p>
+                            <div class="mt-auto">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a class="text-decoration-none" href="https://github.com/Jeka8833"
+                                           target="_blank" rel="noopener noreferrer">
+                                            <i class="bi bi-github"></i> Jeka8833
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="text-decoration-none"><i class="bi bi-discord"></i>
+                                            Jeka8833
+                                        </a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="text-decoration-none" href="mailto:mail@tntclient@jeka8833.pp.ua">
+                                            <i class="bi bi-envelope-fill"></i> tntclient@jeka8833.pp.ua
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="max-width: 400px" class="col mx-auto">
+                <div class="card h-100 border border-0">
+                    <img src="images/mainPage/scratex-avatar.png" class="card-img-top rounded-circle mx-auto"
+                         alt="Scratex Avatar" style="max-width: 150px" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Scratex</h3>
+                        <hr/>
+                        <div class="card-text h-100 row justify-content-end">
+                            <p>Special thanks for the help with translation and beta testing.</p>
+
+                            <ul class="col list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none"><i class="bi bi-discord"></i> scratex
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none" href="mailto:mail@scratex@jeka8833.pp.ua">
+                                        <i class="bi bi-envelope-fill"></i> scratex@jeka8833.pp.ua
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-5 text-center" id="donate">
+        <h1 class="text-center">Donate</h1>
+        <hr/>
+        <p class="fs-5">For any donation amount, you will get access to a page where you can create and install your own
+            cape.</p>
+        <p class="fs-5">If you need payment advice, please contact <a href="#contact">Jeka8833</a>.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 pt-5">
+            <div class="col">
+                <div class="card h-100 border border-0">
+                    <img src="images/mainPage/xmr.svg" class="card-img-top mx-auto" alt="Blockchain XMR"
+                         style="max-width: 150px" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Blockchain XMR</h3>
+                        <hr/>
+                        <div class="d-flex flex-nowrap">
+                            <pre tabindex="0" class="chroma m-0 w-100" id="BlockchainXMR">87pmLqqPZeghf7eumQW1di81qZL3V7rARLUvAxniR7SKgMJs2zvdK6GRuv9Sw7RGjZftzxcLQJgVx4HbfMZD1tkw9tHNRVC</pre>
+                            <button class="copy btn btn-link p-0 ms-2" data-clipboard-target="#BlockchainXMR"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" data-bs-title="Copy">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border border-0">
+                    <img src="images/mainPage/paypal.svg" class="card-img-top mx-auto" alt="PayPal"
+                         style="max-width: 150px" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">PayPal</h3>
+                        <hr/>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#paypalInfo">
+                            View instruction
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border border-0">
+                    <img src="images/mainPage/binance.svg" class="card-img-top mx-auto" alt="Binance USD"
+                         style="max-width: 150px" loading="lazy">
+                    <div class="card-body">
+                        <h3 class="card-title">Binance USD</h3>
+                        <hr/>
+                        <div class="d-flex flex-nowrap">
+                            <pre tabindex="0" class="chroma m-0 w-100" id="BinanceUSD">538862378</pre>
+                            <button class="copy btn btn-link p-0 ms-2" data-clipboard-target="#BinanceUSD"
+                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip" data-bs-title="Copy">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="container-xxl flex-grow-0 flex-shrink-1 border-top">
+    <div class="py-1 m-1 d-flex align-items-center flex-column flex-sm-row justify-content-between">
+        <p class="m-0">Created by: Jeka8833, 2023-2024 year</p>
+        <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-github"></i></a>
+    </div>
+</footer>
+<div class="modal fade" id="paypalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">PayPal instruction</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>1. It is very important that you do not enter any information in the "What's this for?" field.
+                    Otherwise your transaction will be blocked by PayPal.</p>
+                <p>2. You will have to wait from 1 to 14+ days for the money to be transferred as the transaction may be
+                    blocked by the bank.</p>
+                <br>
+                <p>The answer to why a transaction may have been blocked. PayPal prohibits the sale of items without
+                    official registration, but allows donations.</p>
+                <p>To notify me of a transaction or if you have any other problem, please contact Jeka8833.</p>
+                <br>
+                <h5 class="text-center">PayPal address</h5>
+                <hr>
+                <div class="d-flex flex-nowrap">
+                    <pre tabindex="0" class="chroma m-0 w-100" id="PayPalAddress">paypal@jeka8833.pp.ua</pre>
+                    <button class="copy btn btn-link p-0 ms-2" data-clipboard-target="#PayPalAddress"
+                            data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip" data-bs-title="Copy">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

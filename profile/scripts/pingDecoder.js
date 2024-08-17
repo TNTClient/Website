@@ -2,8 +2,8 @@ function playerGroup(data) {
     const out = {};
 
     for (const row of data) {
-        if (out[row.name] === undefined) out[row.name] = [];
-        out[row.name].push(row);
+        if (out[row.Name] === undefined) out[row.Name] = [];
+        out[row.Name].push(row);
     }
     return out;
 }
@@ -12,7 +12,7 @@ function toPointArray(data, name) {
     const out = [];
     for (const row of data) {
         if (row[name] !== '0')
-            out.push({x: row.time, y: row[name]})
+            out.push({x: row.Time, y: row[name]})
         else out.push({x: undefined, y: undefined})
     }
     return out.sort(function (a, b) {
@@ -37,7 +37,7 @@ function generateDataForDataset(data, name) {
 }
 
 $(function () {
-    const hypixelPingE = document.getElementById('hypixelPing');
+    const hypixelPingE = document.getElementById('ServerPing');
     const hypixelPingChart = new Chart(hypixelPingE, {
         type: 'scatter',
         options: {
@@ -60,54 +60,8 @@ $(function () {
         }
     });
 
-    const myPingE = document.getElementById('myPing');
+    const myPingE = document.getElementById('PluginChannelPing');
     const myPingChart = new Chart(myPingE, {
-        type: 'scatter',
-        options: {
-            plugins: {
-                zoom: {
-                    zoom: {
-                        wheel: {
-                            enabled: true,
-                        },
-                        drag: {
-                            enabled: true,
-                        },
-                        pinch: {
-                            enabled: true
-                        },
-                        mode: 'x',
-                    }
-                }
-            }
-        }
-    });
-
-    const downloadSpeedE = document.getElementById('downloadSpeed');
-    const downloadSpeedChart = new Chart(downloadSpeedE, {
-        type: 'scatter',
-        options: {
-            plugins: {
-                zoom: {
-                    zoom: {
-                        wheel: {
-                            enabled: true,
-                        },
-                        drag: {
-                            enabled: true,
-                        },
-                        pinch: {
-                            enabled: true
-                        },
-                        mode: 'x',
-                    }
-                }
-            }
-        }
-    });
-
-    const uploadSpeedE = document.getElementById('uploadSpeed');
-    const uploadSpeedChart = new Chart(uploadSpeedE, {
         type: 'scatter',
         options: {
             plugins: {
@@ -152,7 +106,7 @@ $(function () {
         }
     });
 
-    const brtE = document.getElementById('brt');
+    const brtE = document.getElementById('BRT');
     const brtChart = new Chart(brtE, {
         type: 'scatter',
         options: {
@@ -188,22 +142,16 @@ $(function () {
             console.log('File content:', data);
             const gr = playerGroup(data);
 
-            hypixelPingChart.data.datasets = generateDataset(gr, "hypixelPing");
+            hypixelPingChart.data.datasets = generateDataset(gr, "ServerPing");
             hypixelPingChart.update();
 
-            myPingChart.data.datasets = generateDataset(gr, "mySystemPing");
+            myPingChart.data.datasets = generateDataset(gr, "PluginChannelPing");
             myPingChart.update();
-
-            downloadSpeedChart.data.datasets = generateDataset(gr, "hypixelDownload");
-            downloadSpeedChart.update();
-
-            uploadSpeedChart.data.datasets = generateDataset(gr, "hypixelUpload");
-            uploadSpeedChart.update();
 
             DJPingChart.data.datasets = generateDataset(gr, "DJPing");
             DJPingChart.update();
 
-            brtChart.data.datasets = generateDataset(gr, "brt");
+            brtChart.data.datasets = generateDataset(gr, "BRT");
             brtChart.update();
             $("#plotBlocks").removeClass("invisible")
         };

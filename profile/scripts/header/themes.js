@@ -48,8 +48,8 @@
         }
     })
 
-    $(document).ready(function() {
-        showActiveTheme(getPreferredTheme())
+    $(document).ready(() => {
+        showActiveTheme(getPreferredTheme());
 
         document.querySelectorAll('[data-bs-theme-value]')
             .forEach(toggle => {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ping Visualizer | TNTPanel</title>
+    <title>Accessories | TNTClient</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="48x48" href="../images/favicon-48x48.png">
@@ -28,25 +28,11 @@
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
-            integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
-            integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
-            integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
-
     <script src="scripts/header/domainReplacer.js"></script>
     <script src="scripts/header/themes.js"></script>
 
     <script type="module" src="scripts/header/header.mjs"></script>
-    <script src="scripts/pingDecoder.js"></script>
+    <script type="module" src="scripts/accessories/pageScript.mjs"></script>
 </head>
 <body>
 <div class="min-vh-100">
@@ -66,7 +52,7 @@
                     <ul class="navbar-nav me-lg-auto">
                         <hr class="d-lg-none text-white-50">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="accessories.html">Accessories</a>
+                            <a class="nav-link active" aria-current="page" href="accessories.html">Accessories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="heart.html">Heart</a>
@@ -78,7 +64,7 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">Util</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="pingVisualizer.html">Ping Visualizer</a></li>
+                                <li><a class="dropdown-item" href="pingVisualizer.html">Ping Visualizer</a></li>
                             </ul>
                         </li>
                         <hr class="d-lg-none text-white-50">
@@ -136,28 +122,20 @@
     </header>
 
     <main class="container-xxl">
-        <label for="pingFile" class="form-label">The file you want to view:</label>
-        <input type="file" class="form-control mb-3" id="pingFile" accept=".csv">
-        <p class="mb-5">You can see what @pingrecorder recorded, the recording is stored in the folder:
-            .minecraft/TNTClients-records/PingRecorder/</p>
+        <h1 class="text-center">Your accessories</h1>
+        <hr/>
 
-        <div id="plotBlocks" class="invisible">
-            <h1>Hypixel Ping</h1>
-            <hr>
-            <canvas id="ServerPing"></canvas>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
+             id="selectedAccessories"></div>
 
-            <h1>My System Ping</h1>
-            <hr>
-            <canvas id="PluginChannelPing"></canvas>
+        <h1 class="text-center mt-5">Available accessories:</h1>
+        <hr/>
+        <input class="form-control mb-5" type="text" placeholder="Search" aria-label="Search field"
+               id="availableAccessoriesSearch">
 
-            <h1>DJ Ping</h1>
-            <hr>
-            <canvas id="DJPing"></canvas>
 
-            <h1>Block Reaction Time</h1>
-            <hr>
-            <canvas id="BRT"></canvas>
-        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
+             id="availableAccessories"></div>
     </main>
 </div>
 

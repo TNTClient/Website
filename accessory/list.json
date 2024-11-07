@@ -1,0 +1,74 @@
+{
+  "annihilation_disciple_hat": {
+    "name": "Annihilation disciple Hat",
+    "modelConfig": "{tntweb}accessory/config/annihilation_disciple.cfg",
+    "modelTexture": "{tntweb}accessory/texture/annihilation_disciple.png",
+    "preview": "{tntweb}accessory/preview/annihilation_disciple.png"
+  },
+  "archer_hat": {
+    "name": "Archer Hat",
+    "modelConfig": "{tntweb}accessory/config/archerhat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/archerhat.png",
+    "preview": "{tntweb}accessory/preview/archerhat.png"
+  },
+  "aristocrat_hat": {
+    "name": "Aristocrat Hat",
+    "modelConfig": "{tntweb}accessory/config/aristrocat_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/aristrocat_hat.png",
+    "preview": "{tntweb}accessory/preview/aristrocat_hat.png"
+  },
+  "black_cat_ears": {
+    "name": "Black cat ears Hat",
+    "modelConfig": "{tntweb}accessory/config/black_cat_ears.cfg",
+    "modelTexture": "{tntweb}accessory/texture/black_cat_ears.png",
+    "preview": "{tntweb}accessory/preview/black_cat_ears.png"
+  },
+  "bunny_ears": {
+    "name": "Bunny ears Hat",
+    "modelConfig": "{tntweb}accessory/config/bunny_ears.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bunny_ears.png",
+    "preview": "{tntweb}accessory/preview/bunny_ears.png"
+  },
+  "cat_hat": {
+    "name": "Cat Hat",
+    "modelConfig": "{tntweb}accessory/config/cat_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/cat_hat.png",
+    "preview": "{tntweb}accessory/preview/cat_hat.png"
+  },
+  "dragon_mask": {
+    "name": "Dragon mask Hat",
+    "modelConfig": "{tntweb}accessory/config/dragon_mask.cfg",
+    "modelTexture": "{tntweb}accessory/texture/dragon_mask.png",
+    "preview": "{tntweb}accessory/preview/dragon_mask.png"
+  },
+  "elf_ears": {
+    "name": "Elf ears Hat",
+    "modelConfig": "{tntweb}accessory/config/elf_ears.cfg",
+    "modelTexture": "{tntweb}accessory/texture/elf_ears.png",
+    "preview": "{tntweb}accessory/preview/elf_ears.png"
+  },
+  "forest_hood": {
+    "name": "Forest hood Hat",
+    "modelConfig": "{tntweb}accessory/config/forest_hood.cfg",
+    "modelTexture": "{tntweb}accessory/texture/forest_hood.png",
+    "preview": "{tntweb}accessory/preview/forest_hood.png"
+  },
+  "fox_ears": {
+    "name": "Fox ears Hat",
+    "modelConfig": "{tntweb}accessory/config/fox_ears.cfg",
+    "modelTexture": "{tntweb}accessory/texture/fox_ears.png",
+    "preview": "{tntweb}accessory/preview/fox_ears.png"
+  },
+  "fox_mask": {
+    "name": "Fox mask Hat",
+    "modelConfig": "{tntweb}accessory/config/fox_mask.cfg",
+    "modelTexture": "{tntweb}accessory/texture/fox_mask.png",
+    "preview": "{tntweb}accessory/preview/fox_mask.png"
+  },
+  "snow_fox_ears": {
+    "name": "Snow fox ears Hat",
+    "modelConfig": "{tntweb}accessory/config/snow_fox_ears.cfg",
+    "modelTexture": "{tntweb}accessory/texture/snow_fox_ears.png",
+    "preview": "{tntweb}accessory/preview/snow_fox_ears.png"
+  }
+}

@@ -1,37 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow"/>
-
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Login error | TNTPanel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="../../images/favicon-144x144.png">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
             integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
           integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-    <script src="../scripts/domainReplacer.js"></script>
-    <script src="../scripts/themes.js"></script>
-    <script src="../scripts/tntClientServer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="../../images/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="144x144" href="../../images/favicon-144x144.png">
+    <script src="../scripts/header/domainReplacer.js"></script>
+    <script src="../scripts/header/themes.js"></script>
 </head>
 <body>
 <div class="d-flex flex-column overflow-hidden min-vh-100 vh-100">
@@ -105,8 +103,8 @@
                 </a>
                 <div class="collapse mt-4 shadow-sm" id="explanation">
                     <div class="card card-body">
-                        This is because this website does not use a username and password. The website therefore does
-                        not store your password in the database.
+                        Either there has been a server reboot or the session time has expired. The site does not have
+                        any passwords, so you can only resume your session via TNTClient.
                     </div>
                 </div>
             </div>
@@ -115,15 +113,12 @@
     <div class="container-xxl flex-grow-0 flex-shrink-1 border-top">
         <footer class="py-1 m-1">
             <div class="d-flex align-items-center flex-column flex-sm-row justify-content-between">
-                <p class="m-0">Created by: Jeka8833, 2023 year</p>
+                <p class="m-0">Created by: Jeka8833, 2024 year</p>
                 <a class="link-secondary fs-4" href="https://github.com/Jeka8833" target="_blank"
                    rel="noopener noreferrer"> <i class="bi bi-github"></i></a>
             </div>
         </footer>
     </div>
 </div>
-<script>
-    logout(function () {});
-</script>
 </body>
 </html>

@@ -19,17 +19,20 @@ export function sendSelectedAccessories(accessoriesList) {
 }
 
 /**
- * @param {string} uuid
  * @returns {Promise<string[]>}
  * */
-export function readAccessories(uuid) {
-    const cached = cacheStorage.getCachedValue(cacheKey);
-    if (cached !== null) return Promise.resolve(Array.from(cached));
+export function readAccessories() {
+    try {
+        const cached = cacheStorage.getCachedValue(cacheKey);
+        if (cached !== null) return Promise.resolve(Array.from(cached));
 
-    return playerStorage.getPlayerConfig(uuid).then(value => {
-        const accessories = value["accessories"];
-        if (accessories === undefined) return Promise.resolve([]);
+        return playerStorage.getPlayerConfig().then(value => {
+            const accessories = value["accessories"];
+            if (accessories === undefined || accessories === null) return [];
 
-        return Object.keys(accessories);
-    });
+            return Object.keys(accessories);
+        });
+    } catch {
+        return Promise.resolve([]);
+    }
 }

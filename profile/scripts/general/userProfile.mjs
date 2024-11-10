@@ -1,4 +1,4 @@
-import * as tntclientEndoint from "./tntclientWebEndpoints.mjs"
+import * as tntclientEndpoint from "./tntclientWebEndpoints.mjs"
 import * as cacheStorage from "./tempCacheStorage.mjs"
 
 const userCacheKey = "user";
@@ -21,7 +21,7 @@ export function getUserUUIDWithoutDashes() {
  * @returns {Promise<string[]>}
  * */
 export function authByCredentials(user, password) {
-    const privilegesPromise = tntclientEndoint.getPrivilegesByCredentials(user, password);
+    const privilegesPromise = tntclientEndpoint.getPrivilegesByCredentials(user, password);
 
     privilegesPromise.then((privileges) => {
         localStorage.setItem(userCacheKey, user);
@@ -36,7 +36,7 @@ export function authByCredentials(user, password) {
  * @returns {Promise<string[]>}
  * */
 export function auth() {
-    const privilegesPromise = tntclientEndoint.getPrivileges();
+    const privilegesPromise = tntclientEndpoint.getPrivileges();
 
     privilegesPromise.then((privileges) => {
         cacheStorage.setCachedValue(privilegeCacheKey, privileges);
@@ -49,7 +49,7 @@ export function auth() {
  * @returns {Promise<Response>}
  * */
 export function logout() {
-    const response = tntclientEndoint.logout();
+    const response = tntclientEndpoint.logout();
 
     response.then(() => {
         localStorage.clear();
@@ -65,7 +65,7 @@ function getPrivileges() {
     const cached = cacheStorage.getCachedValue(privilegeCacheKey);
     if (cached !== null) return Promise.resolve(cached);
 
-    const privilegesPromise = tntclientEndoint.getPrivileges();
+    const privilegesPromise = tntclientEndpoint.getPrivileges();
 
     privilegesPromise.then((privileges) => {
         cacheStorage.setCachedValue(privilegeCacheKey, privileges);

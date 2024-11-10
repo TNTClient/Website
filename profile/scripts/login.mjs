@@ -1,6 +1,6 @@
-import * as tntclientEndoint from "../general/tntclientWebEndpoints.mjs"
-import * as userProfile from "../general/userProfile.mjs"
-import * as tntclientEndpoint from "../general/tntclientWebEndpoints.mjs";
+import * as userProfile from "./general/userProfile.mjs"
+import * as domainManager from "../../scripts/domainManager.mjs";
+import * as tntclientEndpoint from "./general/tntclientWebEndpoints.mjs"
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -8,10 +8,8 @@ const urlParams = new URLSearchParams(queryString);
 const user = urlParams.get("user")
 const token = urlParams.get("token")
 
-tntclientEndoint.authErrorListener.push(() => {
-    if (currentDomain !== undefined && currentDomain.redirectOnFail) {
-        window.location.replace(getCurrentDomainAddress('profile/login/fail.html'));
-    }
+tntclientEndpoint.authErrorListener.push(() => {
+    window.location.replace(domainManager.getCurrentOrigin() + 'profile/login/fail.html');
 });
 tntclientEndpoint.networkErrorListener.push(() => {
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(document.getElementById('networkError'))
@@ -27,11 +25,11 @@ tntclientEndpoint.errorWithMessageListener.push((message) => {
 if (user == null || token == null) {
     userProfile.auth()
         .then(() => {
-            window.location.replace(getCurrentDomainAddress('profile/'));
+            window.location.replace(domainManager.getCurrentOrigin() + 'profile/');
         });
 } else {
     userProfile.authByCredentials(user, token)
         .then(() => {
-            window.location.replace(getCurrentDomainAddress('profile/'));
+            window.location.replace(domainManager.getCurrentOrigin() + 'profile/');
         });
 }

@@ -11,6 +11,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="144x144" href="../images/favicon-144x144.png">
 
+    <script type="module" src="../scripts/domainReplacer.mjs" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
           integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -24,8 +30,7 @@
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="../profile/scripts/header/themes.js"></script>
-    <script src="../profile/scripts/header/domainReplacer.js"></script>
+    <script src="../scripts/themes.js"></script>
 </head>
 <body>
 <div class="min-vh-100">
@@ -108,8 +113,7 @@
                             the TNTClient server goes down.</p>
                         <p>In this article you will learn how to register your key.</p>
                         <p>Article:
-                            <a href="api/" target="_blank"
-                               rel="noopener noreferrer">https://{{host}}/help/api/</a>
+                            <a href="api/" target="_blank" rel="noopener noreferrer">{{host}}help/api/</a>
                         </p>
                     </div>
                 </div>
@@ -127,8 +131,7 @@
                             install any cape.</p>
                         <p>This article will show you how to create and install your own cape.</p>
                         <p>Article:
-                            <a href="cape/" target="_blank"
-                               rel="noopener noreferrer">https://{{host}}/help/cape/</a>
+                            <a href="cape/" target="_blank" rel="noopener noreferrer">{{host}}help/cape/</a>
                         </p>
                     </div>
                 </div>
@@ -143,9 +146,5 @@
             <i class="bi bi-github"></i></a>
     </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

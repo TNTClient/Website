@@ -28,10 +28,9 @@
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="scripts/header/domainReplacer.js"></script>
-    <script src="scripts/header/themes.js"></script>
+    <script src="../scripts/themes.js"></script>
 
-    <script type="module" src="scripts/header/header.mjs"></script>
+    <script type="module" src="scripts/header.mjs"></script>
     <script type="module" src="scripts/accessories/pageScript.mjs"></script>
 </head>
 <body>
@@ -40,7 +39,8 @@
         <nav class="navbar bg-body-tertiary navbar-expand-lg">
             <div class="container-xxl">
                 <a class="navbar-brand">
-                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel"> TNTPanel
+                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel" loading="lazy">
+                    TNTPanel
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -122,17 +122,19 @@
     </header>
 
     <main class="container-xxl">
-        <h1 class="text-center">Your accessories</h1>
-        <hr/>
+        <div class="d-none" id="selectedAccessoriesContainer">
+            <h1 class="text-center">Your accessories:</h1>
+            <hr/>
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
-             id="selectedAccessories"></div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4 pb-5"
+                 id="selectedAccessories"></div>
+        </div>
 
         <h1 class="text-center mt-5">Available accessories:</h1>
         <hr/>
-        <input class="form-control mb-5" type="text" placeholder="Search" aria-label="Search field"
-               id="availableAccessoriesSearch">
 
+        <input class="form-control mb-5 shadow-sm" type="text" placeholder="Search" aria-label="Search field"
+               id="availableAccessoriesSearch">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-4"
              id="availableAccessories"></div>
@@ -149,7 +151,24 @@
     </footer>
 </div>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
+<div class="toast-container position-fixed bottom-0 end-0 px-3">
+    <div id="saveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto"> Do you want to save the changes?</strong>
+        </div>
+        <div class="toast-body">
+            After saving, you will see the changes in 5 minutes.
+            <div class="mt-2">
+                <button type="button" class="btn btn-primary btn-sm" id="saveChanges">
+                    <span class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"
+                          id="saveSpinner"></span>
+                    Save
+                </button>
+                <button type="button" class="btn btn-danger btn-sm" id="discardChanges">Reset changes</button>
+            </div>
+        </div>
+    </div>
+
     <div id="networkError" class="toast bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">

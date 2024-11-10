@@ -10,6 +10,12 @@
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="144x144" href="images/favicon-144x144.png">
 
+    <script type="module" src="scripts/domainReplacer.mjs" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
           integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -28,15 +34,13 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="scripts/mainPage.js"></script>
-
-    <script src="profile/scripts/header/themes.js"></script>
-    <script src="profile/scripts/header/domainReplacer.js"></script>
+    <script src="scripts/themes.js"></script>
 </head>
 <body>
 
 <div style="background: rgba(0, 0, 0, 1);">
     <img src="images/mainPage/main.jpg" alt="Background"
-         class="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2">
+         class="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2" loading="lazy">
     <div class="position-relative container d-flex mx-auto flex-column text-center vh-100 z-3">
         <header class="mb-auto">
             <div>
@@ -144,7 +148,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" href="https://{{download}}/download/TNTClient.jar" target="_blank"
+                        <a class="btn btn-primary" href="{{download}}download/TNTClient.jar" target="_blank"
                            rel="noopener noreferrer">Download</a>
                     </div>
                 </div>
@@ -165,7 +169,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" href="https://{{download}}/download/TNTClientInstaller.jar"
+                        <a class="btn btn-primary" href="{{download}}download/TNTClientInstaller.jar"
                            target="_blank" rel="noopener noreferrer">Download</a>
                     </div>
                 </div>
@@ -185,7 +189,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary" href="https://{{download}}/download/OfflineInstaller.zip"
+                        <a class="btn btn-primary" href="{{download}}download/OfflineInstaller.zip"
                            target="_blank" rel="noopener noreferrer">Download</a>
                     </div>
                 </div>
@@ -207,12 +211,12 @@
                     <div class="card-footer">
                         <div class="d-flex flex-nowrap">
                             <a class="btn btn-link p-0 me-2"
-                               href="https://{{download}}/download/TNTClient-universal.zip" target="_blank"
+                               href="{{download}}download/TNTClient-universal.zip" target="_blank"
                                rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="top"
                                data-bs-custom-class="custom-tooltip" data-bs-title="Download">
                                 <i class="bi bi-download"></i>
                             </a>
-                            <pre tabindex="0" class="w-100 chroma m-0" id="MultiMCUniversalLink">https://{{download}}/download/TNTClient-universal.zip</pre>
+                            <pre tabindex="0" class="w-100 chroma m-0" id="MultiMCUniversalLink">{{download}}download/TNTClient-universal.zip</pre>
                             <button class="copy btn btn-link p-0 ms-2" data-clipboard-target="#MultiMCUniversalLink"
                                     data-bs-toggle="tooltip" data-bs-placement="top"
                                     data-bs-custom-class="custom-tooltip" data-bs-title="Copy">
@@ -456,7 +460,7 @@
             </div>
             <div class="modal-body">
                 <p>1. It is very important that you do not enter any information in the "What's this for?" field.
-                    Otherwise your transaction will be blocked by PayPal.</p>
+                    Otherwise, your transaction will be blocked by PayPal.</p>
                 <p>2. You will have to wait from 1 to 14+ days for the money to be transferred as the transaction may be
                     blocked by the bank.</p>
                 <br>
@@ -481,9 +485,5 @@
         </div>
     </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

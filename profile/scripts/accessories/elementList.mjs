@@ -1,4 +1,5 @@
 import accessoriesList from '../../../accessory/list.json' with {type: 'json'};
+import * as domainManager from "../../../scripts/domainManager.mjs";
 
 /**
  * @type {Set<string>}
@@ -132,20 +133,16 @@ function download_files(files) {
         if (i >= files.length) {
             return;
         }
-        var a = document.createElement('a');
+        const a = document.createElement('a');
         a.href = files[i].download;
         a.target = '_parent';
         // Use a.download if available, it prevents plugins from opening.
         if ('download' in a) {
             a.download = files[i].filename;
         }
-        // Add a to the doc for click to work.
+        // Add to the doc for click to work.
         (document.body || document.documentElement).appendChild(a);
-        if (a.click) {
-            a.click(); // The click method is supported by most browsers.
-        } else {
-            $(a).click(); // Backup using jquery
-        }
+        a.click(); // The click method is supported by most browsers.
         // Delete the temporary link.
         a.parentNode.removeChild(a);
         // Download the next file with a small timeout. The timeout is necessary
@@ -164,6 +161,5 @@ function download_files(files) {
  * @returns {string}
  * */
 function replaceDomain(url) {
-    return url.replaceAll("{tntweb}",
-        currentDomain.protocol + currentDomain.hostname + currentDomain.startPath)
+    return url.replaceAll("{tntweb}", domainManager.getCurrentOrigin())
 }

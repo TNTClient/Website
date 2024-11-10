@@ -1,10 +1,12 @@
+import * as domainManager from "../../../scripts/domainManager.mjs";
+import * as userProfile from "./userProfile.mjs";
+
 /**
- * @param {string} uuid
  * @returns {Promise<any>}
  * @private
  * */
-export function getPlayerConfig(uuid) {
-    const url = getCapeApiAddress(`capeData/${uuid}.json`);
+export function getPlayerConfig() {
+    const url = domainManager.getCapeOrigin() + 'capeData/' + userProfile.getUserUUID() + '.json';
 
     return fetch(url)
         .then(response => response.json());

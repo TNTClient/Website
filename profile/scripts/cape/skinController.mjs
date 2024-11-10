@@ -1,6 +1,5 @@
 import {readAllCapes} from "./capeLoaderApi.mjs"
 import * as userProfile from "../general/userProfile.mjs"
-import {getUserUUIDWithoutDashes} from "../general/userProfile.mjs";
 
 const startAnimationTime = Date.now();
 

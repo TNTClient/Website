@@ -34,11 +34,9 @@
             integrity="sha512-MzluaiqTHieej9sKOtlT5D5uog5n278iCAX/sr8Ms271OkiKptg1RZgRXRjhQ+v4yO3LcffdeeQfiUfMpduqeA=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="../scripts/themes.js"></script>
 
-    <script src="scripts/header/domainReplacer.js"></script>
-    <script src="scripts/header/themes.js"></script>
-
-    <script type="module" src="scripts/header/header.mjs"></script>
+    <script type="module" src="scripts/header.mjs"></script>
 
     <script src="scripts/cape/skin.js"></script>
     <script type="module" src="scripts/cape/pageScript.mjs"></script>
@@ -49,7 +47,8 @@
         <nav class="navbar bg-body-tertiary navbar-expand-lg">
             <div class="container-xxl">
                 <a class="navbar-brand">
-                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel"> TNTPanel
+                    <img src="../images/favicon-32x32.png" width="32" height="32" alt="TNTPanel" loading="lazy">
+                    TNTPanel
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -310,13 +309,13 @@
     </footer>
 </div>
 
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
+<div class="toast-container position-fixed bottom-0 end-0 px-3">
     <div id="saveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
-            <strong class="me-auto">Save</strong>
+            <strong class="me-auto"> Do you want to save the changes?</strong>
         </div>
         <div class="toast-body">
-            Do you want to save the changes? After saving, you will see the changes in 5 minutes.
+            After saving, you will see the changes in 5 minutes.
             <div class="mt-2">
                 <button type="button" class="btn btn-primary btn-sm" id="saveChanges">
                     <span class="spinner-border spinner-border-sm visually-hidden" role="status" aria-hidden="true"

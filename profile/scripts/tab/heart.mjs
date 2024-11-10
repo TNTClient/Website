@@ -145,7 +145,7 @@ $(() => {
                 textElement.value = animation.join('\n');
             }
         } else {
-            playerStorage.getPlayerConfig(userProfile.getUserUUID())
+            playerStorage.getPlayerConfig()
                 .then(data => {
                     if (data['heartAnimation'] === undefined) return;
 

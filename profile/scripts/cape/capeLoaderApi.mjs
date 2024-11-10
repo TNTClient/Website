@@ -3,7 +3,7 @@ import * as capeResizer from "./capeResizer.mjs";
 import * as cacheStorage from "../general/tempCacheStorage.mjs";
 import * as userProfile from "../general/userProfile.mjs";
 import * as playerStorage from "../general/playerStorage.mjs";
-
+import * as domainManager from "../../../scripts/domainManager.mjs";
 
 /**
  * @param {string} uuidOrName
@@ -30,12 +30,12 @@ export async function getCurrentCape() {
     const cached = cacheStorage.getCachedValue("cached-cape");
     if (cached !== null) return Promise.resolve(CapeClass.fromObject(cached));
 
-    const capeUrl = getCapeApiAddress(`capes/${userProfile.getUserUUID()}.png`);
+    const capeUrl = domainManager.getCapeOrigin() + 'capes/' + userProfile.getUserUUID() + '.png';
 
     const [userCape, userData] =
         await Promise.allSettled([
             capeResizer.normalizeCapeSize(capeUrl),
-            playerStorage.getPlayerConfig(userProfile.getUserUUID())
+            playerStorage.getPlayerConfig()
         ]);
 
     if (userCape.status === "fulfilled" && userData.status === "fulfilled") {

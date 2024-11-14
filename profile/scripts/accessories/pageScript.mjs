@@ -12,7 +12,7 @@ const defaultSelected = new Set();
  * */
 let lastTooltips = null;
 
-let hasPrivileges = true;
+let hasPrivileges = false;
 
 /**
  * @param {string} accessoryKey
@@ -94,6 +94,8 @@ accessoriesApi.readAccessories().then(value => {
         defaultSelected.add(key);
         elementList.selectedAccessoryKeys.add(key);
     }
+
+    accessoriesUpdate();
 })
 
 userProfile.hasAccessoryPrivilege().then(value => {

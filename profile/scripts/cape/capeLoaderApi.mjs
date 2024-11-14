@@ -30,7 +30,7 @@ export async function getCurrentCape() {
     const cached = cacheStorage.getCachedValue("cached-cape");
     if (cached !== null) return Promise.resolve(CapeClass.fromObject(cached));
 
-    const capeUrl = domainManager.getCapeOrigin() + 'capes/' + userProfile.getUserUUID() + '.png';
+    const capeUrl = domainManager.getCapeOrigin() + 'cape/' + userProfile.getUserUUID() + '.png';
 
     const [userCape, userData] =
         await Promise.allSettled([

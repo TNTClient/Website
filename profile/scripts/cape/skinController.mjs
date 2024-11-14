@@ -36,12 +36,19 @@ function getElementAndRegisterListener(componentID) {
  * */
 function createSkin(component, cape, isOptifine) {
     const skin = new SkinRender({
-        autoResize: true, canvas: {
-            width: component.offsetWidth, height: component.offsetHeight
-        }, controls: {
+        autoResize: true,
+        canvas: {
+            width: component.offsetWidth,
+            height: component.offsetHeight
+        },
+        controls: {
             pan: false
-        }, camera: {
-            x: 0, y: 16, z: -27, target: [0, 16, 0]
+        },
+        camera: {
+            x: 0,
+            y: 16,
+            z: -27,
+            target: [0, 16, 0]
         },
     }, component);
 
@@ -105,7 +112,7 @@ $(document).ready(() => {
  * */
 export function setTNTClientCape(cape) {
     $(() => {
-        tntClientSkin.reset();
+        tntClientSkin.dispose();
         tntClientSkin = createSkin(tntClientSkinElement, cape.base64Image, false);
     });
 }
@@ -115,7 +122,7 @@ export function setTNTClientCape(cape) {
  * */
 export function setEditorCape(cape) {
     $(() => {
-        tntClientSkinEdit.reset();
+        tntClientSkinEdit.dispose();
         tntClientSkinEdit = createSkin(tntClientSkinEditElement, cape, false);
     });
 }
@@ -123,12 +130,12 @@ export function setEditorCape(cape) {
 readAllCapes(userProfile.getUserUUID()).then(value => {
     if (value["optifine"] !== undefined) {
         $(() => {
-            optifineCape.reset();
+            optifineCape.dispose();
             optifineCape = createSkin(optifineCapeElement, value["optifine"], true);
         });
     } else if (value["minecraft"] !== undefined) {
         $(() => {
-            optifineCape.reset();
+            optifineCape.dispose();
             optifineCape = createSkin(optifineCapeElement, value["minecraft"], false);
         });
     }

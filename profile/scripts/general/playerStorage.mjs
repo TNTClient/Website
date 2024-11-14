@@ -6,7 +6,7 @@ import * as userProfile from "./userProfile.mjs";
  * @private
  * */
 export function getPlayerConfig() {
-    const url = domainManager.getCapeOrigin() + 'capeData/' + userProfile.getUserUUID() + '.json';
+    const url = domainManager.getCapeOrigin() + 'config/' + userProfile.getUserUUID() + '.json';
 
     return fetch(url)
         .then(response => response.json());

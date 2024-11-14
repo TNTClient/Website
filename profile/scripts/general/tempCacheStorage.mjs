@@ -11,7 +11,7 @@ function clearOld() {
         if (key.startsWith('tempCache-')) {
             const parsed = JSON.parse(items[key]);
             if (parsed === null || parsed.createTime === undefined || parsed.value === undefined ||
-                now - parsed.createTime > 5 * 60 * 1000) {
+                now - parsed.createTime > 15 * 60 * 1000) {
                 localStorage.removeItem(key);
             }
         }

@@ -2,6 +2,12 @@ import * as tntclientEndpoint from "./general/tntclientWebEndpoints.mjs";
 import * as domainManager from "../../scripts/domainManager.mjs";
 import * as userProfile from "./general/userProfile.mjs";
 
+if (userProfile.getUserUUID() === null) {
+    userProfile.logout().finally(() => {
+        window.location.replace(domainManager.getCurrentOrigin() + 'profile/login/fail.html');
+    });
+}
+
 tntclientEndpoint.authErrorListener.push(() => {
     userProfile.logout().then(() => {
         window.location.replace(domainManager.getCurrentOrigin() + 'profile/login/fail.html');

@@ -126,11 +126,10 @@ $(document).ready(() => {
     });
 
     editSaveBtn.click(() => {
+        myCollapseSetup.hide();
+
         needSendCape = new CapeClass(filteredCape, needSendCape.isActive);
         skin.setTNTClientCape(needSendCape);
-
-        myCollapseSetup.hide();
-        window.dispatchEvent(new Event('resize'));
 
         updateButtonStatus();
     });

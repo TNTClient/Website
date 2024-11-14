@@ -147,7 +147,9 @@ export function removeTab() {
  * @returns {Promise<Response>}
  * */
 export function updateAccessories(accessories) {
-    return fetchPut('api/v1/player/profile/accessories', accessories);
+    return fetchPut('api/v1/player/profile/accessories', {
+        accessories: accessories
+    });
 }
 
 /**
@@ -211,13 +213,6 @@ function processError(response) {
  * */
 function fetchPut(urlPart, object) {
     try {
-        if (object === undefined || object === null) {
-            errorWithMessageListener.forEach(value =>
-                value("Incorrect state for request. Refresh the page and try again."));
-
-            return Promise.reject();
-        }
-
         const url = domainManager.getTntServerOrigin() + urlPart;
 
         return processError(

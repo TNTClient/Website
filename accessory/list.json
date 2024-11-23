@@ -1,4 +1,16 @@
 {
+  "adventurer_hat": {
+    "name": "Adventurer Hat",
+    "modelConfig": "{tntweb}accessory/config/adventurer_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/adventurer_hat.png",
+    "preview": "{tntweb}accessory/preview/adventurer_hat.png"
+  },
+  "ancient_diadem": {
+    "name": "Ancient diadem Hat",
+    "modelConfig": "{tntweb}accessory/config/ancient_diadem.cfg",
+    "modelTexture": "{tntweb}accessory/texture/ancient_diadem.png",
+    "preview": "{tntweb}accessory/preview/ancient_diadem.png"
+  },
   "annihilation_disciple_hat": {
     "name": "Annihilation disciple Hat",
     "modelConfig": "{tntweb}accessory/config/annihilation_disciple.cfg",
@@ -17,11 +29,107 @@
     "modelTexture": "{tntweb}accessory/texture/aristrocat_hat.png",
     "preview": "{tntweb}accessory/preview/aristrocat_hat.png"
   },
+  "ashen_kasa_hat": {
+    "name": "Ashen kasa Hat",
+    "modelConfig": "{tntweb}accessory/config/ashen_kasa.cfg",
+    "modelTexture": "{tntweb}accessory/texture/ashen_kasa.png",
+    "preview": "{tntweb}accessory/preview/ashen_kasa.png"
+  },
+  "assassin_hat": {
+    "name": "Assassin Hat",
+    "modelConfig": "{tntweb}accessory/config/assassinhat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/assassinhat.png",
+    "preview": "{tntweb}accessory/preview/assassinhat.png"
+  },
+  "avo_headdress": {
+    "name": "Avo headdress Hat",
+    "modelConfig": "{tntweb}accessory/config/avo_headdress.cfg",
+    "modelTexture": "{tntweb}accessory/texture/avo_headdress.png",
+    "preview": "{tntweb}accessory/preview/avo_headdress.png"
+  },
+  "azure_kabuto_hat": {
+    "name": "Azure kabuto Hat",
+    "modelConfig": "{tntweb}accessory/config/azure_kabuto.cfg",
+    "modelTexture": "{tntweb}accessory/texture/azure_kabuto.png",
+    "preview": "{tntweb}accessory/preview/azure_kabuto.png"
+  },
+  "bandana_hat": {
+    "name": "Bandana Hat",
+    "modelConfig": "{tntweb}accessory/config/bandana.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bandana.png",
+    "preview": "{tntweb}accessory/preview/bandana.png"
+  },
+  "bandit_mask": {
+    "name": "Azure kabuto Hat",
+    "modelConfig": "{tntweb}accessory/config/bandit_mask.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bandit_mask.png",
+    "preview": "{tntweb}accessory/preview/bandit_mask.png"
+  },
+  "beret": {
+    "name": "Beret Hat",
+    "modelConfig": "{tntweb}accessory/config/beret.cfg",
+    "modelTexture": "{tntweb}accessory/texture/beret.png",
+    "preview": "{tntweb}accessory/preview/beret.png"
+  },
+  "big_catch_hat": {
+    "name": "Big catch Hat",
+    "modelConfig": "{tntweb}accessory/config/big_catch.cfg",
+    "modelTexture": "{tntweb}accessory/texture/big_catch.png",
+    "preview": "{tntweb}accessory/preview/big_catch.png"
+  },
+  "bird_nest": {
+    "name": "Bird nest Hat",
+    "modelConfig": "{tntweb}accessory/config/bird_nest.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bird_nest.png",
+    "preview": "{tntweb}accessory/preview/bird_nest.png"
+  },
   "black_cat_ears": {
     "name": "Black cat ears Hat",
     "modelConfig": "{tntweb}accessory/config/black_cat_ears.cfg",
     "modelTexture": "{tntweb}accessory/texture/black_cat_ears.png",
     "preview": "{tntweb}accessory/preview/black_cat_ears.png"
+  },
+  "bonfire_crown": {
+    "name": "Bonfire crown Hat",
+    "modelConfig": "{tntweb}accessory/config/bonfire_crown.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bonfire_crown.png",
+    "preview": "{tntweb}accessory/preview/bonfire_crown.png"
+  },
+  "bonfire_headdress": {
+    "name": "Bonfire headdress Hat",
+    "modelConfig": "{tntweb}accessory/config/bonfire_headdress.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bonfire_headdress.png",
+    "preview": "{tntweb}accessory/preview/bonfire_headdress.png"
+  },
+  "bookworm_hat": {
+    "name": "Bookworm Hat",
+    "modelConfig": "{tntweb}accessory/config/bookworm.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bookworm.png",
+    "preview": "{tntweb}accessory/preview/bookworm.png"
+  },
+  "boreal_crown_hat": {
+    "name": "Boreal crown Hat",
+    "modelConfig": "{tntweb}accessory/config/boreal_crown.cfg",
+    "modelTexture": "{tntweb}accessory/texture/boreal_crown.png",
+    "preview": "{tntweb}accessory/preview/boreal_crown.png"
+  },
+  "bounty_hunter_hat": {
+    "name": "Bounty hunter Hat",
+    "modelConfig": "{tntweb}accessory/config/bounty_hunter_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bounty_hunter_hat.png",
+    "preview": "{tntweb}accessory/preview/bounty_hunter_hat.png"
+  },
+  "brewing_cauldron": {
+    "name": "Brewing cauldron Hat",
+    "modelConfig": "{tntweb}accessory/config/brewing_cauldron.cfg",
+    "modelTexture": "{tntweb}accessory/texture/brewing_cauldron.png",
+    "preview": "{tntweb}accessory/preview/brewing_cauldron.png"
+  },
+  "bucket_hat": {
+    "name": "Bucket Hat",
+    "modelConfig": "{tntweb}accessory/config/bucket_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/bucket_hat.png",
+    "preview": "{tntweb}accessory/preview/bucket_hat.png"
   },
   "bunny_ears": {
     "name": "Bunny ears Hat",
@@ -35,6 +143,60 @@
     "modelTexture": "{tntweb}accessory/texture/cat_hat.png",
     "preview": "{tntweb}accessory/preview/cat_hat.png"
   },
+  "champion_fullhelm_hat": {
+    "name": "Champion full helmet Hat",
+    "modelConfig": "{tntweb}accessory/config/champion_fullhelm.cfg",
+    "modelTexture": "{tntweb}accessory/texture/champion_fullhelm.png",
+    "preview": "{tntweb}accessory/preview/champion_fullhelm.png"
+  },
+  "cheese_wheel_hat": {
+    "name": "Cheese wheel Hat",
+    "modelConfig": "{tntweb}accessory/config/cheese_wheel.cfg",
+    "modelTexture": "{tntweb}accessory/texture/cheese_wheel.png",
+    "preview": "{tntweb}accessory/preview/cheese_wheel.png"
+  },
+  "chef_poultry_hat": {
+    "name": "Chef poultry Hat",
+    "modelConfig": "{tntweb}accessory/config/chef_poultry.cfg",
+    "modelTexture": "{tntweb}accessory/texture/chef_poultry.png",
+    "preview": "{tntweb}accessory/preview/chef_poultry.png"
+  },
+  "chefs_hat": {
+    "name": "Chefs Hat",
+    "modelConfig": "{tntweb}accessory/config/chefs_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/chefs_hat.png",
+    "preview": "{tntweb}accessory/preview/chefs_hat.png"
+  },
+  "corkian_goggles_hat": {
+    "name": "Corkian goggles Hat",
+    "modelConfig": "{tntweb}accessory/config/corkian_goggles.cfg",
+    "modelTexture": "{tntweb}accessory/texture/corkian_goggles.png",
+    "preview": "{tntweb}accessory/preview/corkian_goggles.png"
+  },
+  "cowboy_hat": {
+    "name": "Cowboy Hat",
+    "modelConfig": "{tntweb}accessory/config/cowboy_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/cowboy_hat.png",
+    "preview": "{tntweb}accessory/preview/cowboy_hat.png"
+  },
+  "crown_of_chains_hat": {
+    "name": "Crown of chains Hat",
+    "modelConfig": "{tntweb}accessory/config/crown_of_chains.cfg",
+    "modelTexture": "{tntweb}accessory/texture/crown_of_chains.png",
+    "preview": "{tntweb}accessory/preview/crown_of_chains.png"
+  },
+  "curious_maw": {
+    "name": "Curious maw Hat",
+    "modelConfig": "{tntweb}accessory/config/curious_maw.cfg",
+    "modelTexture": "{tntweb}accessory/texture/curious_maw.png",
+    "preview": "{tntweb}accessory/preview/curious_maw.png"
+  },
+  "devilhorns_hat": {
+    "name": "Devil horns Hat",
+    "modelConfig": "{tntweb}accessory/config/devilhorns.cfg",
+    "modelTexture": "{tntweb}accessory/texture/devilhorns.png",
+    "preview": "{tntweb}accessory/preview/devilhorns.png"
+  },
   "dragon_mask": {
     "name": "Dragon mask Hat",
     "modelConfig": "{tntweb}accessory/config/dragon_mask.cfg",
@@ -46,6 +208,18 @@
     "modelConfig": "{tntweb}accessory/config/elf_ears.cfg",
     "modelTexture": "{tntweb}accessory/texture/elf_ears.png",
     "preview": "{tntweb}accessory/preview/elf_ears.png"
+  },
+  "elf_hat": {
+    "name": "Elf Hat",
+    "modelConfig": "{tntweb}accessory/config/elf_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/elf_hat.png",
+    "preview": "{tntweb}accessory/preview/elf_hat.png"
+  },
+  "eye_cultist_hood": {
+    "name": "Eye cultist hood Hat",
+    "modelConfig": "{tntweb}accessory/config/eye_cultist_hood.cfg",
+    "modelTexture": "{tntweb}accessory/texture/eye_cultist_hood.png",
+    "preview": "{tntweb}accessory/preview/eye_cultist_hood.png"
   },
   "forest_hood": {
     "name": "Forest hood Hat",
@@ -65,10 +239,64 @@
     "modelTexture": "{tntweb}accessory/texture/fox_mask.png",
     "preview": "{tntweb}accessory/preview/fox_mask.png"
   },
+  "goathorns_hat": {
+    "name": "Goat horns Hat",
+    "modelConfig": "{tntweb}accessory/config/goathorns.cfg",
+    "modelTexture": "{tntweb}accessory/texture/goathorns.png",
+    "preview": "{tntweb}accessory/preview/goathorns.png"
+  },
+  "half_moon_hood_hat": {
+    "name": "Half moon hood Hat",
+    "modelConfig": "{tntweb}accessory/config/half_moon_hood.cfg",
+    "modelTexture": "{tntweb}accessory/texture/half_moon_hood.png",
+    "preview": "{tntweb}accessory/preview/half_moon_hood.png"
+  },
+  "holiday_lights": {
+    "name": "Holiday lights Hat",
+    "modelConfig": "{tntweb}accessory/config/holiday_lights.cfg",
+    "modelTexture": "{tntweb}accessory/texture/holiday_lights.png",
+    "preview": "{tntweb}accessory/preview/holiday_lights.png"
+  },
   "snow_fox_ears": {
     "name": "Snow fox ears Hat",
     "modelConfig": "{tntweb}accessory/config/snow_fox_ears.cfg",
     "modelTexture": "{tntweb}accessory/texture/snow_fox_ears.png",
     "preview": "{tntweb}accessory/preview/snow_fox_ears.png"
+  },
+  "tree_hat": {
+    "name": "Tree Hat",
+    "modelConfig": "{tntweb}accessory/config/tree_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/tree_hat.png",
+    "preview": "{tntweb}accessory/preview/tree_hat.png"
+  },
+  "werewolf_mask": {
+    "name": "Werewolf mask Hat",
+    "modelConfig": "{tntweb}accessory/config/werewolf_mask.cfg",
+    "modelTexture": "{tntweb}accessory/texture/werewolf_mask.png",
+    "preview": "{tntweb}accessory/preview/werewolf_mask.png"
+  },
+  "winter_hat": {
+    "name": "Winter Hat",
+    "modelConfig": "{tntweb}accessory/config/winter_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/winter_hat.png",
+    "preview": "{tntweb}accessory/preview/winter_hat.png"
+  },
+  "winter_moon_hat": {
+    "name": "Winter moon Hat",
+    "modelConfig": "{tntweb}accessory/config/winter_moon_hat.cfg",
+    "modelTexture": "{tntweb}accessory/texture/winter_moon_hat.png",
+    "preview": "{tntweb}accessory/preview/winter_moon_hat.png"
+  },
+  "winter_scarf": {
+    "name": "Winter scarf Hat",
+    "modelConfig": "{tntweb}accessory/config/winter_scarf.cfg",
+    "modelTexture": "{tntweb}accessory/texture/winter_scarf.png",
+    "preview": "{tntweb}accessory/preview/winter_scarf.png"
+  },
+  "wybel_beanie": {
+    "name": "Wybel beanie Hat",
+    "modelConfig": "{tntweb}accessory/config/wybel_beanie.cfg",
+    "modelTexture": "{tntweb}accessory/texture/wybel_beanie.png",
+    "preview": "{tntweb}accessory/preview/wybel_beanie.png"
   }
 }

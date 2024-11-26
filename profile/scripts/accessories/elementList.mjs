@@ -35,7 +35,7 @@ export function downloadAccessory(key) {
  * @returns void
  * */
 export function drawAvailableAccessories(component, searchText, canActivate) {
-    component.innerHTML = "";
+    let domHtml = "";
 
     const searchedWords = searchText.trim().toLowerCase().split(" ");
     for (const [key, accessory] of Object.entries(accessoriesList)) {
@@ -46,16 +46,17 @@ export function drawAvailableAccessories(component, searchText, canActivate) {
         }
 
         const name = accessory.name || key;
-        const preview = replaceDomain(accessory.preview || "{tntweb}images/accessories/missing.png");
+        const previewAspectRatio = accessory.preview.aspectRatio || 0.86468646864686468646864686468647;
+        const previewUrl = replaceDomain(accessory.preview.url || "{tntweb}images/accessories/missing.png");
 
         const buttonClick = canActivate ? ` onclick="window.addAccessory('${key}')"` :
             ' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="You haven\'t bought accessories." ' +
             'style="pointer-events: auto;" disabled';
 
-        component.innerHTML +=
+        domHtml +=
             `<div class="col">
                 <div class="card h-100 shadow-lg">
-                    <img class="card-img-top" src="${preview}" alt="Image: ${name}" loading="lazy">
+                    <img class="card-img-top" src="${previewUrl}" alt="Image: ${name}" loading="lazy" style="aspect-ratio: ${previewAspectRatio}">
                     <div class="card-body">
                         <h5 class="card-title text-center">${name}</h5>
                     </div>
@@ -68,6 +69,8 @@ export function drawAvailableAccessories(component, searchText, canActivate) {
                 </div>
             </div>`;
     }
+
+    component.innerHTML = domHtml;
 }
 
 /**
@@ -75,7 +78,7 @@ export function drawAvailableAccessories(component, searchText, canActivate) {
  * @returns void
  * */
 export function drawSelectedAccessories(component) {
-    component.innerHTML = "";
+    let domHtml = "";
 
     for (const accessoryKey of selectedAccessoryKeys) {
         if (accessoryKey === undefined || accessoryKey === null) continue;
@@ -84,12 +87,13 @@ export function drawSelectedAccessories(component) {
         if (accessory === undefined || accessory === null) continue;
 
         const name = accessory.name || accessoryKey;
-        const preview = replaceDomain(accessory.preview || "{tntweb}images/accessories/missing.png");
+        const previewAspectRatio = accessory.preview.aspectRatio || 0.86468646864686468646864686468647;
+        const previewUrl = replaceDomain(accessory.preview.url || "{tntweb}images/accessories/missing.png");
 
-        component.innerHTML +=
+        domHtml +=
             `<div class="col">
                 <div class="card h-100 shadow-lg">
-                    <img class="card-img-top" src="${preview}" alt="Image: ${name}" loading="lazy">
+                    <img class="card-img-top" src="${previewUrl}" alt="Image: ${name}" loading="lazy" style="aspect-ratio: ${previewAspectRatio}">
                     <div class="card-body">
                         <h5 class="card-title text-center">${name}</h5>
                     </div>
@@ -102,6 +106,8 @@ export function drawSelectedAccessories(component) {
                 </div>
             </div>`;
     }
+
+    component.innerHTML = domHtml;
 }
 
 /**

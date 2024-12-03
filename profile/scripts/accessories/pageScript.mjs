@@ -59,7 +59,7 @@ function accessoriesUpdate() {
     }
 
     const saveToast = document.getElementById('saveToast');
-    if (hasPrivileges && isChanged()) {
+    if (isChanged()) {
         saveToast.classList.add('show');
     } else {
         saveToast.classList.remove('show');

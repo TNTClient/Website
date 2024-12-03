@@ -17,23 +17,14 @@ export const networkErrorListener = [];
  * @returns {Promise<Response>}
  * */
 export function logout() {
-    try {
-        const url = domainManager.getTntServerOrigin() + 'api/logout';
+    return fetchPost('api/logout');
+}
 
-        return processError(
-            fetch(url, {
-                method: 'POST',
-                credentials: 'include',
-                headers: {
-                    'X-Requested-From': 'TNTClient Web Profile'
-                }
-            })
-        );
-    } catch {
-        errorWithMessageListener.forEach(value => value("Error in request. Refresh the page and try again."));
-
-        return Promise.reject();
-    }
+/**
+ * @returns {Promise<Response>}
+ * */
+export function adminResetAccessoryCache() {
+    return fetchPost('api/v1/admin/reset/accessory/cache');
 }
 
 /**
@@ -203,6 +194,31 @@ function processError(response) {
 
         return value;
     });
+}
+
+/**
+ * @param {string} urlPart
+ * @returns {Promise<Response>}
+ * @private
+ * */
+function fetchPost(urlPart) {
+    try {
+        const url = domainManager.getTntServerOrigin() + urlPart;
+
+        return processError(
+            fetch(url, {
+                method: 'POST',
+                credentials: 'include',
+                headers: {
+                    'X-Requested-From': 'TNTClient Web Profile'
+                }
+            })
+        );
+    } catch {
+        errorWithMessageListener.forEach(value => value("Error in request. Refresh the page and try again."));
+
+        return Promise.reject();
+    }
 }
 
 /**

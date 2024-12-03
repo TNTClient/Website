@@ -77,6 +77,14 @@ function getPrivileges() {
 /**
  * @returns {Promise<boolean>}
  * */
+export function hasAdminPrivilege() {
+    return getPrivileges()
+        .then(privileges => privileges.includes("ADMIN"));
+}
+
+/**
+ * @returns {Promise<boolean>}
+ * */
 export function hasCapePrivilege() {
     return getPrivileges()
         .then(privileges => privileges.includes("CAPE"));

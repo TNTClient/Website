@@ -1,6 +1,7 @@
 import * as tntclientEndpoint from "../general/tntclientWebEndpoints.mjs";
 import * as cacheStorage from "../general/tempCacheStorage.mjs"
 import * as playerStorage from "../general/playerStorage.mjs";
+import seasonalAccessories from '../../../accessory/seasonal.json' with {type: 'json'};
 
 const cacheKey = "cached-accessories"
 
@@ -35,4 +36,22 @@ export function readAccessories() {
     } catch {
         return Promise.resolve([]);
     }
+}
+
+/**
+ * @returns {string[]}
+ * */
+export function getAllSeasonalAccessories() {
+    const currentDate = new Date();
+    let out = [];
+
+    for (const seasonalBlock of seasonalAccessories) {
+        if (new Date(seasonalBlock.start) <= currentDate && new Date(seasonalBlock.end) >= currentDate) {
+            if (!Array.isArray(seasonalBlock.accessories)) continue;
+
+            out.push(...seasonalBlock.accessories);
+        }
+    }
+
+    return out;
 }

@@ -1,5 +1,6 @@
 import accessoriesList from '../../../accessory/list.json' with {type: 'json'};
 import * as domainManager from "../../../scripts/domainManager.mjs";
+import * as accessoriesApi from "./accessoriesApi.mjs";
 
 /**
  * @type {Set<string>}
@@ -31,11 +32,13 @@ export function downloadAccessory(key) {
 /**
  * @param {HTMLElement} component
  * @param {string} searchText
- * @param {boolean} canActivate
+ * @param {boolean} hasPermission
  * @returns void
  * */
-export function drawAvailableAccessories(component, searchText, canActivate) {
+export function drawAvailableAccessories(component, searchText, hasPermission) {
     let domHtml = "";
+
+    const seasonalAccessories = accessoriesApi.getAllSeasonalAccessories();
 
     const searchedWords = searchText.trim().toLowerCase().split(" ");
     for (const [key, accessory] of Object.entries(accessoriesList)) {
@@ -49,9 +52,10 @@ export function drawAvailableAccessories(component, searchText, canActivate) {
         const previewAspectRatio = accessory.preview.aspectRatio || 0.86468646864686468646864686468647;
         const previewUrl = replaceDomain(accessory.preview.url || "{tntweb}images/accessories/missing.png");
 
-        const buttonClick = canActivate ? ` onclick="window.addAccessory('${key}')"` :
-            ' data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="You haven\'t bought accessories." ' +
-            'style="pointer-events: auto;" disabled';
+        const buttonClick = (hasPermission || seasonalAccessories.includes(key)) ?
+            `class="btn btn-success d-block w-100" onclick="window.addAccessory('${key}')"` :
+            'class="btn btn-secondary d-block w-100" data-bs-toggle="tooltip" data-bs-placement="bottom" ' +
+            'data-bs-title="You haven\'t bought accessories." style="pointer-events: auto;" disabled';
 
         domHtml +=
             `<div class="col">
@@ -64,7 +68,7 @@ export function drawAvailableAccessories(component, searchText, canActivate) {
                         <button class="btn btn-link my-auto p-0 mb-2 d-block w-100" data-bs-toggle="tooltip" data-bs-placement="top"
                            data-bs-title="Download the model for BlockBench if you want to modify it." 
                            onclick="window.downloadAccessory('${key}')">Download model</button>
-                        <button class="btn btn-success d-block w-100"${buttonClick}>Enable</button>
+                        <button ${buttonClick}>Enable</button>
                     </div>
                 </div>
             </div>`;

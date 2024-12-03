@@ -147,14 +147,14 @@ $(() => {
         } else {
             playerStorage.getPlayerConfig()
                 .then(data => {
-                    if (data['heartAnimation'] === undefined) return;
+                    if (data['animationConfig'] === undefined) return;
 
-                    const delayMs = data['heartAnimation']['timeShift'];
+                    const delayMs = data['animationConfig']['timeShift'];
                     if (typeof delayMs === "number") {
                         speedDividerElement.value = delayMs;
                     }
 
-                    const animation = data['heartAnimation']['textAnimation'];
+                    const animation = data['animationConfig']['textAnimation'];
                     if (Array.isArray(animation)) {
                         const tempArr = [];
                         for (let anim of animation) {

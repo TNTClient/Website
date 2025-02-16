@@ -1,5 +1,5 @@
 export function getCurrentOrigin() {
-    if (window.location.hostname === 'localhost') return window.location.origin + '/TNTClientWebsite/';
+    //if (window.location.hostname === 'localhost') return window.location.origin + '/Website/';
 
     return window.location.origin + '/';
 }
@@ -18,7 +18,7 @@ export function getCapeOrigin() {
 
 export function getTntServerOrigin() {
     if (window.location.hostname === 'tntclient.994799.xyz') return 'https://tntapi.994799.xyz/';
-    if (window.location.hostname === 'localhost') return 'http://localhost:8080/';
+    //if (window.location.hostname === 'localhost') return 'http://localhost:8080/';
     //if (/.+\.tntclientwebsite.pages.dev$/.test(window.location.hostname)) return 'https://tntapi.jeka8833.pp.ua/';
 
     return 'https://tntapi.jeka8833.pp.ua/';

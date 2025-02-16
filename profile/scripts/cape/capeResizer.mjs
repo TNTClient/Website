@@ -163,7 +163,7 @@ function getSize(width, height) {
 
     let newWidth = 64;
     let newHeight = 32;
-    while ((newWidth < width || newHeight < height) && newWidth < 2024) {
+    while ((newWidth < width || newHeight < height) && newWidth < 2048) {
         newWidth *= 2;
         newHeight *= 2;
     }

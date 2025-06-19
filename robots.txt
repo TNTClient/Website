@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /cgi-bin/
+Disallow: /help/
+Disallow: /profile/
